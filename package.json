@@ -1,0 +1,20 @@
+{
+  "name": "svgestor",
+  "version": "1.0.0",
+  "description": "I'll create a library that assists in managing SVGs, utilizing different interfaces to implement best practices and to support different cases.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Joshua Dimaunahan",
+  "license": "MIT",
+  "devDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
