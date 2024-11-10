@@ -1,44 +1,46 @@
-This is library for auto generate svg component from svg file.
+# Getting Started with Create React App
 
-first step: basic svg component with basic interface
-- showing basic usage
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-dependencies:
-- [SVGO](https://github.com/svg/svgo) only svg to react comp. A dependency that will be used to optimize the svg code.
-- [TailwindCSS](https://tailwindcss.com/) for interface styling
+## Available Scripts
 
+In the project directory, you can run:
 
-svg component example
-```tsx
-import //selected interface from the component
-// example when i choose basicSvgInterface it will appear the interface there
-// import { BasicSvgInterface } from './NormalSvgInterfaces';
+### `npm start`
 
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-const SvgComponent: React.FC<interface...> = ({ interface... }) => {
-  return (
-      // insert there svg code
-  );
-};
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-export default SvgComponent;
+### `npm test`
 
-// 1. when importing it will pass to svg-to-react-component and it will take the svg code then do his stuff by removing redoundance. then generate-component name so as "GmailSvgComponent" and insert the trasnformed code in // insert there svg code 
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-// 2. when we import first time the svg component in the project it will yes generate the svg code in the component but it will not generate the interface so we need to define what kind of interface we want to use then it the svg component will have the interface
-```
+### `npm run build`
 
-Interface example
-```tsx
-/**
- * interface that will define the props of the svg components
- */
-export interface BasicSvgInterface {
-  width: string;
-  height: string;
-  fill: string;
-}
-```
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-i've been following tutorial by Alex Eagleson to build my library, [tutorial](https://www.youtube.com/watch?v=c6eP0LKzGrQe)
-this one will be needed to give the user the ability to use the component by importing it from the library.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
