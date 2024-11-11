@@ -34,7 +34,8 @@ const ItemGmailSvg: React.FC<BasicSvgInterface> = ({ //there will be interface p
 export default ItemGmailSvg;
 ```
 
-2. Transform the svg code to react component `it is incomplete with the dependency SVGO it will automatically remove the redoundance and optimize the svg code taken from the import, but still need to define the interface`
+2. Sanitize the svg code by removing redoundance and optimize the svg code taken from the import `the dependency SVGO will automatically remove the redoundance and optimize the svg code taken from the import, but still need to define the interface!`
+Our base interface will be like this:
 ```tsx
 /**
  * interface that will define the props of the svg components
@@ -46,12 +47,12 @@ interface BasicSvgInterface {
 }
 ```
 
-3. When we write the component `<SvgGmailComponent />` we need to define the interface `behind the scene it will definethe component to have the interface that we choose it will give errors if we dont put the interface`
+3. Then when we write the component `<SvgGmailComponent />` we need to define the interface `behind the scene it will define the component to have the interface we choose, it will give errors if we dont put the interface`
 ```tsx
 <SvgGmailComponent interface={BasicSvgInterface} />
 ```
 
-4. Define the properties of the interface `width, height, fill we will be using tailwindcss to define the style`
+4. Define the properties of the interface `We will be using tailwindcss to define the style, in our case width, height, fill`
 ```tsx
 <SvgGmailComponent 
       interface={{
@@ -64,7 +65,7 @@ interface BasicSvgInterface {
 />
 ```
 
-5. In the end the component will be in behind the scene modified like this
+5. If everything is correct the component will be like this:
 ```tsx
 import React from "react";
 import { BasicSvgInterface } from "../../../interfaces/svgInterface";
@@ -89,8 +90,9 @@ const ItemGmailSvg: React.FC<BasicSvgInterface> = ({ fill, width, height, style 
 export default ItemGmailSvg;
 ```
 
+**Take note that the user is not goint to touch the component, the user will only define the interface and the properties of the interface.**
 
-# DESIGN PATTERN TO USE
+# DESIGN PATTERN TO USE?
 - factory pattern
 - Decorator pattern
 ---
