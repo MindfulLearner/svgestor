@@ -13,7 +13,9 @@ dependencies:
 **Introduction**: Our objective is to create a component that will manage .svg files.
 To make it we need to follow these steps:
 
-1. Import the svg file in the project `import GmailSvg from './assets/gmail.svg' it will generate a new component behind the scene` it will look like this:
+**For now ignore the where is the component code, under the hood will be modified, so you dont need to worry about it. Just focus on the interface and the properties of the interface.**
+
+1. Import the svg file in the project `import GmailSvg from './assets/gmail.svg' it will generate a new component` generate a name for it `<ItemGmailSvg />`, and it will look like this behind the scene:
 ```tsx
 import React from "react";
 import { // name of the interface } from //there will be interface path;
@@ -47,14 +49,14 @@ interface BasicSvgInterface {
 }
 ```
 
-3. Then when we write the component `<SvgGmailComponent />` we need to define the interface `behind the scene it will define the component to have the interface we choose, it will give errors if we dont put the interface`
+3. Then when we want to use the component `<ItemGmailSvg />` we need to define the interface `behind the scene it will define the component to have the interface we choose, it will give errors if we dont put the interface`
 ```tsx
-<SvgGmailComponent interface={BasicSvgInterface} />
+<ItemGmailSvg interface={BasicSvgInterface} />
 ```
 
-4. Define the properties of the interface `We will be using tailwindcss to define the style, in our case width, height, fill`
+4. Define the properties of the interface `We will be using tailwindcss to define the style, in our case width, height, fill, leaving the style empty will give errors`
 ```tsx
-<SvgGmailComponent 
+<ItemGmailSvg 
       interface={{
         basicSvgInterface: {
           width: '100px', 
@@ -90,7 +92,7 @@ const ItemGmailSvg: React.FC<BasicSvgInterface> = ({ fill, width, height, style 
 export default ItemGmailSvg;
 ```
 
-**Take note that the user is not goint to touch the component, the user will only define the interface and the properties of the interface.**
+**Take note that the user is not going to touch the component, the user will only define the interface and the properties of the interface.**
 
 # DESIGN PATTERN TO USE?
 - factory pattern
@@ -125,5 +127,4 @@ export default SvgComponent;
 ```
 
 
-i've been following tutorial by Alex Eagleson to build my library, [tutorial](https://www.youtube.com/watch?v=c6eP0LKzGrQe)
-this one will be needed to give the user the ability to use the component by importing it from the library.
+i've been following tutorial by Yan Sun to build my library, [tutorial](https://blog.logrocket.com/how-to-build-component-library-react-typescript/#setting-up-development-environment)
