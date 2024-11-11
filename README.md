@@ -51,7 +51,7 @@ interface BasicSvgInterface {
 <SvgGmailComponent interface={BasicSvgInterface} />
 ```
 
-4. Define the properties of the interface `width, height, fill`
+4. Define the properties of the interface `width, height, fill we will be using tailwindcss to define the style`
 ```tsx
 <SvgGmailComponent 
       interface={{
