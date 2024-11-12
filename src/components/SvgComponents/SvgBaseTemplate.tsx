@@ -1,7 +1,27 @@
 import React from "react";
 import { BasicSvgInterface } from "../Interfaces/StaticProps";
+// utilize function from utils to optimize the svg
+import optimizeSvgFile from "../../utils/transformUtils";
 
 const ItemGmailSvg: React.FC<BasicSvgInterface> = ({ fill, width, height }) => {
+  //define the state for the svg path
+  const [svgPath, setSvgPath] = React.useState<string>("");
+
+  // fetch svg and call getOptimizedSvg
+  React.useEffect(() => {
+    const fetchSvg = async () => {
+      const optimizedSvg = await getOptimizedSvg("public/SvgIcon/gmail.svg");
+      setSvgPath(optimizedSvg);
+    };
+    fetchSvg();
+  }, []);
+
+  // get optimized svg will call the optimizeSvgFile function
+  async function getOptimizedSvg(path: string): Promise<string> {
+    const optimizedSvg = await optimizeSvgFile(path);
+    return optimizedSvg;
+  }
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -9,10 +29,7 @@ const ItemGmailSvg: React.FC<BasicSvgInterface> = ({ fill, width, height }) => {
       height={height}
       viewBox="0 0 32 32"
     >
-      <path
-        d="M30.996 7.824v17.382a2.044 2.044 0 0 1-2.044 2.044H24.179V15.663L16 21.799l-8.179-6.136v11.588H3.049a2.044 2.044 0 0 1-2.044-2.044V7.824A3.067 3.067 0 0 1 5.92 5.376l-.008-.006L16 12.937 26.088 5.37a3.067 3.067 0 0 1 4.907 2.454z"
-        fill={fill}
-      />
+      <path d={svgPath} fill={fill} />
     </svg>
   );
 };
