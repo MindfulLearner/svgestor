@@ -6,6 +6,8 @@ first step: basic svg component with basic interface
 dependencies:
 - [SVGO](https://github.com/svg/svgo) only svg to react comp. A dependency that will be used to optimize the svg code.
 - [TailwindCSS](https://tailwindcss.com/) for interface styling
+??
+- [fs/promise](https://nodejs.org/api/fs.html) for reading the svg file
 
 
 ---

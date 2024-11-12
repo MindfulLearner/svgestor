@@ -29,6 +29,7 @@ const ItemGmailSvg: React.FC<BasicSvgInterface> = ({ fill, width, height }) => {
       height={height}
       viewBox="0 0 32 32"
     >
+      {/* use effect will fetch the svg and set the state for the svg path */}
       <path d={svgPath} fill={fill} />
     </svg>
   );
