@@ -3,11 +3,18 @@ This is library for auto generate svg component from svg file.
 first step: basic svg component with basic interface
 - showing basic usage
 
+# INSTALLATION
+```pnpm install```
+
 dependencies:
 - [SVGO](https://github.com/svg/svgo) only svg to react comp. A dependency that will be used to optimize the svg code.
+```pnpm install svgo```
 - [TailwindCSS](https://tailwindcss.com/) for interface styling
-??
-- [fs/promise](https://nodejs.org/api/fs.html) for reading the svg file
+```pnpm install tailwindcss```
+- [Rollup](https://rollupjs.org/guide/en/) for building the library
+```pnpm install rollup```
+
+- ?? [fs/promise](https://nodejs.org/api/fs.html) for reading the svg file ???
 
 
 ---
