@@ -8,7 +8,9 @@ first step: basic svg component with basic interface
 
 dependencies:
 - [SVGO](https://github.com/svg/svgo) only svg to react comp. A dependency that will be used to optimize the svg code.
-```pnpm install svgo```
+for fs/promises too /
+   ```npm install --save-dev @types/node```
+   ```pnpm install svgo```
 - [TailwindCSS](https://tailwindcss.com/) for interface styling
 ```pnpm install tailwindcss```
 - [Rollup](https://rollupjs.org/guide/en/) for building the library
