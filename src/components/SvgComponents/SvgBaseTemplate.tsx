@@ -7,6 +7,8 @@ const ItemGmailSvg: React.FC<BasicSvgInterface> = ({ fill, width, height }) => {
   //define the state for the svg path
   const [svgPath, setSvgPath] = React.useState<string>("");
 
+  console.log('component loaded');
+
   // fetch svg and call getOptimizedSvg
   React.useEffect(() => {
     const fetchSvg = async () => {
