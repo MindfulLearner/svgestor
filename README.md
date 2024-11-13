@@ -1,32 +1,37 @@
 This is library for auto generate svg component from svg file.
 
 first step: basic svg component with basic interface
+
 - showing basic usage
 
 # INSTALLATION
-```pnpm install```
+
+``pnpm install``
 
 dependencies:
+
 - [SVGO](https://github.com/svg/svgo) only svg to react comp. A dependency that will be used to optimize the svg code.
-for fs/promises too /
-   ```npm install --save-dev @types/node```
-   ```pnpm install svgo```
+  for fs/promises too /
+  ``npm install --save-dev @types/node``
+  ``pnpm install svgo``
 - [TailwindCSS](https://tailwindcss.com/) for interface styling
-```pnpm install tailwindcss```
+  ``pnpm install tailwindcss``
 - [Rollup](https://rollupjs.org/guide/en/) for building the library
-```pnpm install rollup```
-
+  ``pnpm install rollup``
 - ?? [fs/promise](https://nodejs.org/api/fs.html) for reading the svg file ???
-
+  `pnpm add -D @types/node`
 
 ---
+
 # LOGIC BASIC
+
 **Introduction**: Our objective is to create a component that will manage .svg files.
 To make it we need to follow these steps:
 
 **For now ignore the where is the component code, under the hood will be modified, so you dont need to worry about it. Just focus on the interface and the properties of the interface.**
 
 1. Import the svg file in the project `import GmailSvg from './assets/gmail.svg' it will generate a new component` generate a name for it `<ItemGmailSvg />`, and it will look like this behind the scene:
+
 ```tsx
 import React from "react";
 import { // name of the interface } from //there will be interface path;
@@ -48,7 +53,8 @@ export default ItemGmailSvg;
 ```
 
 2. Sanitize the svg code by removing redoundance and optimize the svg code taken from the import `the dependency SVGO will automatically remove the redoundance and optimize the svg code taken from the import, but still need to define the interface!`
-Our base interface will be like this:
+   Our base interface will be like this:
+
 ```tsx
 /**
  * interface that will define the props of the svg components
@@ -61,11 +67,13 @@ interface BasicSvgInterface {
 ```
 
 3. Then when we want to use the component `<ItemGmailSvg />` we need to define the interface `behind the scene it will define the component to have the interface we choose, it will give errors if we dont put the interface`
+
 ```tsx
 <ItemGmailSvg interface={BasicSvgInterface} />
 ```
 
 4. Define the properties of the interface `We will be using tailwindcss to define the style, in our case width, height, fill, leaving the style empty will give errors`
+
 ```tsx
 <ItemGmailSvg 
       interface={{
@@ -79,6 +87,7 @@ interface BasicSvgInterface {
 ```
 
 5. If everything is correct the component will be like this:
+
 ```tsx
 import React from "react";
 import { BasicSvgInterface } from "../../../interfaces/svgInterface";
@@ -106,12 +115,14 @@ export default ItemGmailSvg;
 **Take note that the user is not going to touch the component, the user will only define the interface and the properties of the interface.**
 
 # DESIGN PATTERN TO USE?
+
 - factory pattern
 - Decorator pattern
+
 ---
 
-
 # Interface example
+
 ```tsx
 /**
  * interface that will define the props of the svg components
@@ -122,7 +133,9 @@ export interface BasicSvgInterface {
   fill: string;
 }
 ```
+
 # svg component example
+
 ```tsx
 import //selected interface from the component
 // example when i choose basicSvgInterface it will appear the interface there
@@ -136,6 +149,5 @@ const SvgComponent: React.FC<interface...> = ({ interface... }) => {
 
 export default SvgComponent;
 ```
-
 
 i've been following tutorial by Yan Sun to build my library, [tutorial](https://blog.logrocket.com/how-to-build-component-library-react-typescript/#setting-up-development-environment)
