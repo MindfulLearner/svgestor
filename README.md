@@ -3,9 +3,19 @@
 </div>
 
 ---
-[![npm](https://img.shields.io/badge/npm-v10.8.3-blue)](https://www.npmjs.com/package/npm)
-[![SVGO](https://img.shields.io/badge/SVGO-v3.3.2-brightgreen)](https://www.npmjs.com/package/svgo)
-[![TypeScript](https://img.shields.io/badge/TypeScript-v5.6.3-blue)](https://www.npmjs.com/package/typescript)
+
+<div style="display: flex; justify-content: center;" align="center">
+  <a href="https://www.npmjs.com/package/npm">
+    <img src="https://img.shields.io/badge/npm-v10.8.3-blue" alt="npm">
+  </a>
+  <a href="https://www.npmjs.com/package/svgo">
+    <img src="https://img.shields.io/badge/SVGO-v3.3.2-brightgreen" alt="SVGO">
+  </a>
+  <a href="https://www.npmjs.com/package/typescript">
+    <img src="https://img.shields.io/badge/TypeScript-v5.6.3-blue" alt="TypeScript">
+  </a>
+</div>
+
 
 ---
 
