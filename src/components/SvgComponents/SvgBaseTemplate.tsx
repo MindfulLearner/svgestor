@@ -1,7 +1,7 @@
 import React from "react";
 import { BasicSvgInterface } from "./StaticProps.types";
 // utilize function from utils to optimize the svg
-import optimizeSvgFile from "../../utils/transformUtils";
+import optimizeSvgFile from "../../utils/transformUtils.js";
 
 const ItemGmailSvg: React.FC<BasicSvgInterface> = ({ fill, width, height }) => {
   //define the state for the svg path

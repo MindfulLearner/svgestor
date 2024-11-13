@@ -17,8 +17,3 @@ async function optimizeSvgFile(filePath: string): Promise<string> {
 }
 
 export default optimizeSvgFile;
-
-/**
- * 1. 
- * 
- */

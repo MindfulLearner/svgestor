@@ -15,7 +15,7 @@
         "-r",
         "ts-node/register"
       ],
-      "program": "${workspaceFolder}/src/index.ts",
+      "program": "${workspaceFolder}/src/index.js",
       "outFiles": [
         "${workspaceFolder}/dist/**/*.js"
       ]

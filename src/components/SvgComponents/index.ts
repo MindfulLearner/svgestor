@@ -1,1 +1,1 @@
-export { default } from "./SvgBaseTemplate";
+export { default } from "./SvgBaseTemplate.js";
