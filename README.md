@@ -42,6 +42,8 @@ dependencies:
 - ?? [fs/promise](https://nodejs.org/api/fs.html) for reading the svg file ???
   `pnpm add -D @types/node`
 
+to run rollup use `pnpm rollup -c --bundleConfigAsCjs` 
+
 ---
 
 # LOGIC BASIC

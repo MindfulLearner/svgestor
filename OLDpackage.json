@@ -1,0 +1,33 @@
+{
+    "name": "svgestor",
+    "version": "0.0.1",
+    "description": "library for auto generate svg component from svg file",
+    "main": "dist/cjs/index.js",
+    "module": "dist/esm/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+      "build": "rollup -c --bundleConfigAsCjs"
+    },
+    "keywords": [],
+    "author": "Joshua Dimaunahan",
+    "license": "ISC",
+    "devDependencies": {
+      "@rollup/plugin-commonjs": "^28.0.1",
+      "@rollup/plugin-json": "^6.1.0",
+      "@rollup/plugin-node-resolve": "^15.3.0",
+      "@rollup/plugin-terser": "^0.4.4",
+      "@rollup/plugin-typescript": "^12.1.1",
+      "@types/node": "^22.9.0",
+      "@types/react": "^18.3.12",
+      "@types/svgo": "^3.0.0",
+      "react": "^18.3.1",
+      "rollup": "^4.25.0",
+      "rollup-plugin-dts": "^6.1.1",
+      "rollup-plugin-peer-deps-external": "^2.2.4",
+      "rollup-plugin-postcss": "^4.0.2",
+      "svgo": "^3.3.2",
+      "ts-node": "^10.9.2",
+      "tslib": "^2.8.1",
+      "typescript": "^5.6.3"
+    }
+  }
