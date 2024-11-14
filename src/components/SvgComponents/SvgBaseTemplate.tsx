@@ -1,5 +1,5 @@
 import React from "react";
-import { BasicSvgInterface } from "./StaticProps.types";
+import { BasicSvgInterface } from "./StaticProps.types.js";
 // utilize function from utils to optimize the svg
 import optimizeSvgFile from "../../utils/transformUtils.js";
 

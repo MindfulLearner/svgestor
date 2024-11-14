@@ -1,1 +1,1 @@
-export * from "./SvgComponents/index.js";
+export * from './SvgComponents';

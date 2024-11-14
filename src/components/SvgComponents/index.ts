@@ -1,1 +1,3 @@
-export { default } from "./SvgBaseTemplate.js";
+export * from './DynamicProps.types';
+export * from './StaticProps.types';
+export { default as SvgBaseTemplate } from './SvgBaseTemplate';
