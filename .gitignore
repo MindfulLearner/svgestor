@@ -1,5 +1,7 @@
 dist/
 build/# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+.vscode
+.storybook
 
 # dependencies
 /node_modules
@@ -22,3 +24,5 @@ build/# See https://help.github.com/articles/ignoring-files/ for more about igno
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+*storybook.log
