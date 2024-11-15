@@ -2,17 +2,11 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "node",
+      "name": "Launch Chrome",
       "request": "launch",
-      "name": "Debug Storybook",
-      "program": "${workspaceFolder}/node_modules/.bin/storybook dev -p 6006",
-      "args": ["-p", "6006"],
-      "cwd": "${workspaceFolder}",
-      "sourceMaps": true,
-      "env": {
-        "NODE_ENV": "development"
-      },
-      "skipFiles": ["<node_internals>/**"]
+      "type": "chrome",
+      "url": "http://localhost:6006/",
+      "webRoot": "${workspaceFolder}"
     }
   ]
 }

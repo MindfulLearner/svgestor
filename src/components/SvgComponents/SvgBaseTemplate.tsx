@@ -12,7 +12,7 @@ const ItemGmailSvg: React.FC<BasicSvgInterface> = ({ fill, width, height }) => {
   // fetch svg and call getOptimizedSvg
   React.useEffect(() => {
     const fetchSvg = async () => {
-      const optimizedSvg = await getOptimizedSvg("public/SvgIcon/gmail.svg");
+      const optimizedSvg = await getOptimizedSvg("SvgIcon/gmail.svg");
       setSvgPath(optimizedSvg);
     };
     fetchSvg();
@@ -32,7 +32,10 @@ const ItemGmailSvg: React.FC<BasicSvgInterface> = ({ fill, width, height }) => {
       viewBox="0 0 32 32"
     >
       {/* use effect will fetch the svg and set the state for the svg path */}
-      <path d={svgPath} fill={fill} />
+      <path
+        d={svgPath}
+        fill={fill}
+      />
     </svg>
   );
 };
