@@ -13,6 +13,18 @@ const config = {
       name: 'prefixIds',
       params: { prefix: 'icon' },
     },
+    {
+      name: 'convertPathData', // Assicura la semplificazione dei percorsi
+    },
+    {
+      name: 'mergePaths', // Unisce percorsi contigui
+    },
+    {
+      name: 'removeAttrs',
+      params: {
+        attrs: '(fill)', // Rimuove attributi statici per impostare `fill={fill}`
+      },
+    },
   ],
 };
 
