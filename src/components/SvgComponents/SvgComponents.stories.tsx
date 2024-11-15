@@ -1,6 +1,5 @@
 // smartRating.stories.tsx
 import { StoryFn, Meta } from "@storybook/react";
-import { BasicSvgInterface } from "./StaticProps.types";
 import SvgBaseTemplate from "./SvgBaseTemplate";
 
 export default {
@@ -14,7 +13,7 @@ const Template: StoryFn<typeof SvgBaseTemplate> = (args) => (
 
 export const RatingTest = Template.bind({});
 RatingTest.args = {
-  fill: "primary",
+  fill: "red",
   width: "100",
   height: "100",
 };
