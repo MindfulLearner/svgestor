@@ -173,4 +173,7 @@ const SvgComponent: React.FC<interface...> = ({ interface... }) => {
 export default SvgComponent;
 ```
 
+If you want other Overview check this issue [Issue #1 Svgestor Overview](https://github.com/MindfulLearner/svgestor/issues/1)
+
+
 i've been following tutorial by Yan Sun to build my library, [tutorial](https://blog.logrocket.com/how-to-build-component-library-react-typescript/#setting-up-development-environment)
