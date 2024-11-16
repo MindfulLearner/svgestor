@@ -22,7 +22,9 @@
 This SVG management library is made for SVG handling in your projects. 
 The library provides a preset customisation of your Svg components.
 
+## How to Contribute
 
+- ... Work in progress
 
 
 ## INSTALLATION
