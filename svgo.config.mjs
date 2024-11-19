@@ -14,16 +14,22 @@ const config = {
       params: { prefix: 'icon' },
     },
     {
-      name: 'convertPathData', // Assicura la semplificazione dei percorsi
+      name: 'convertPathData',
+      active: true,
     },
     {
-      name: 'mergePaths', // Unisce percorsi contigui
+      name: 'mergePaths',
+      active: true,
     },
     {
       name: 'removeAttrs',
       params: {
-        attrs: '(fill)', // Rimuove attributi statici per impostare `fill={fill}`
+        attrs: '(fill|stroke|style)',
       },
+    },
+    {
+      name: 'removeDimensions',
+      active: true,
     },
   ],
 };
