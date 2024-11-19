@@ -1,28 +1,19 @@
 import React from "react";
 import { BasicSvgInterface } from "./StaticProps.types";
-// utilize function from utils to optimize the svg
-import optimizeSvgFile from "../../utils/transformUtils";
 
 const ItemGmailSvg: React.FC<BasicSvgInterface> = ({ fill, width, height }) => {
-  //define the state for the svg path
   const [svgPath, setSvgPath] = React.useState<string>("");
 
   console.log('component loaded');
 
-  // fetch svg and call getOptimizedSvg
   React.useEffect(() => {
     const fetchSvg = async () => {
-      const optimizedSvg = await getOptimizedSvg("SvgIcon/gmail.svg");
+      const response = await fetch('/api/optimized-svg?path=SvgIcon/gmail.svg');
+      const optimizedSvg = await response.text();
       setSvgPath(optimizedSvg);
     };
     fetchSvg();
   }, []);
-
-  // get optimized svg will call the optimizeSvgFile function
-  async function getOptimizedSvg(path: string): Promise<string> {
-    const optimizedSvg = await optimizeSvgFile(path);
-    return optimizedSvg;
-  }
 
   return (
     <svg
@@ -31,7 +22,6 @@ const ItemGmailSvg: React.FC<BasicSvgInterface> = ({ fill, width, height }) => {
       height={height}
       viewBox="0 0 32 32"
     >
-      {/* use effect will fetch the svg and set the state for the svg path */}
       <path
         d={svgPath}
         fill={fill}
