@@ -1,37 +1,40 @@
-const config = {
-  multipass: true,
-  js2svg: {
-    indent: 2,
-    pretty: true,
-  },
+export default {
   plugins: [
-    'preset-default',
-    {
-      name: 'removeComments',
-    },
-    {
-      name: 'prefixIds',
-      params: { prefix: 'icon' },
-    },
-    {
-      name: 'convertPathData',
-      active: true,
-    },
-    {
-      name: 'mergePaths',
-      active: true,
-    },
+    // Rimuove gli attributi inutili
     {
       name: 'removeAttrs',
       params: {
-        attrs: '(fill|stroke|style)',
+        attrs: [
+          'fill', 
+          'clip-rule',
+          'fill-rule',
+        ],
+      },
+    },
+    // Aggiunge un wrapper per rendere lo stile e gli attributi dinamici in React
+    {
+      name: 'addAttributesToSVGElement',
+      params: {
+        attributes: [
+          'width="{width}"',
+          'height="{height}"',
+        ],
       },
     },
     {
-      name: 'removeDimensions',
-      active: true,
+      name: 'addClassesToSVGElement',
+      params: {
+        attributes: [
+          'class="{fill}"',
+        ],
+      },
+    },
+    // Ottimizza la struttura dell'SVG
+    {
+      name: 'mergePaths', // Unisce i percorsi per semplificare
+    },
+    {
+      name: 'removeDimensions', // Rimuove le dimensioni statiche
     },
   ],
 };
-
-export default config;

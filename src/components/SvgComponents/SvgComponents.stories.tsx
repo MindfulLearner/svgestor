@@ -1,6 +1,7 @@
 // smartRating.stories.tsx
 import { StoryFn, Meta } from "@storybook/react";
 import SvgBaseTemplate from "./SvgBaseTemplate";
+import alien from "../../../public/SvgIcon/alien.optimized.svg";
 
 export default {
   title: "ReactComponentLibrary/SvgBaseTemplate",

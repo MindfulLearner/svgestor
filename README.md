@@ -18,8 +18,9 @@ dependencies:
   ``pnpm install tailwindcss``
 - [Rollup](https://rollupjs.org/guide/en/) for building the library
   ``pnpm install rollup``
-- ?? [fs/promise](https://nodejs.org/api/fs.html) for reading the svg file ???
+- [fs/promise](https://nodejs.org/api/fs.html) for reading the svg file
   `pnpm add -D @types/node`
+- [SVGREPO](https://www.svgrepo.com/) for svg icons
 
 to run rollup use `pnpm rollup -c --bundleConfigAsCjs` 
 

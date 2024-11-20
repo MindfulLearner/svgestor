@@ -1,20 +1,7 @@
 import React from "react";
+import alien from "SvgIcon/alien.optimized.svg";
 import { BasicSvgInterface } from "./StaticProps.types";
-
-const ItemGmailSvg: React.FC<BasicSvgInterface> = ({ fill, width, height }) => {
-  const [svgPath, setSvgPath] = React.useState<string>("");
-
-  console.log('component loaded');
-
-  React.useEffect(() => {
-    const fetchSvg = async () => {
-      const response = await fetch('/api/optimized-svg?path=SvgIcon/gmail.svg');
-      const optimizedSvg = await response.text();
-      setSvgPath(optimizedSvg);
-    };
-    fetchSvg();
-  }, []);
-
+const SvgBaseTemplate: React.FC<BasicSvgInterface> = ({ fill, width, height }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
