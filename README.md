@@ -20,7 +20,7 @@ opensource
 
 ---
 
-This SVG management library is made for SVG handling in your projects. 
+This SVG management library is made for SVG handling in your react projects. 
 The library provides a preset customisation of your Svg components.
 
 ## INSTALLATION
